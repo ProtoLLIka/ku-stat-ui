@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import Greetings from './components/Greeetings'
+import Main from 'pages/Main';
 
-const App = () => {
-  return (
-    <Greetings />
-  )
-}
+import store from 'store';
 
-export default App
+import 'styles/global.scss';
+
+const App = () => (
+  <Provider store={store}>
+    <Router>
+      <Switch>
+        <Route path="/" component={Main} />
+      </Switch>
+    </Router>
+  </Provider>
+);
+
+export default App;
