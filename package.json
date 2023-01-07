@@ -18,7 +18,8 @@
     "babel-preset-airbnb": "^5.0.0",
     "babel-preset-react-native": "^4.0.1",
     "css-loader": "^6.5.0",
-    "eslint": "^8.1.0",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "^7.0.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
@@ -42,6 +43,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "@types/react-redux": "^7.1.20",
     "axios": "^1.2.2",
+    "dotenv": "^16.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^8.0.5"

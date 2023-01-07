@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import statReducer from "./stat";
+import { configureStore } from '@reduxjs/toolkit';
+import statReducer from './statistic';
 
 const store = configureStore({
   reducer: statReducer,
 });
 
-export type AppDispatch = typeof store.dispatch
-// export const useAppDispatch: () => AppDispatch = store.dispatch
+export type AppDispatch = typeof store.dispatch;
+
 export default store;

@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
@@ -37,6 +38,7 @@ module.exports = {
     new webpack.DefinePlugin({
       API_URL: JSON.stringify(process.env.API_URL || 'http://srv.kod-u.ru:49010'),
     }),
+    new Dotenv()
   ],
   resolve: {
     alias: {

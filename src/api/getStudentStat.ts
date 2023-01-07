@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { SolutionGroup } from 'store/stat/types';
+import { SolutionGroup } from 'store/statistic/types';
 
 import api from 'utils/apiInterceptor';
 

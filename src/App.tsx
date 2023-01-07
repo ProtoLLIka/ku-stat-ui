@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
-import { Provider, useDispatch } from 'react-redux';
-import { getStudentStatAction } from 'store/stat/actions';
-import store, { AppDispatch } from 'store/index';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from 'store/index';
+
+import { DataFetcher } from 'components/data-fetcher';
 
 const App = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getStudentStatAction(15));
-  }, []);
-
   return (
     <Provider store={store}>
-      <div>Hi, creator!</div>
+      <DataFetcher>
+        <div>Hi, creator!</div>
+      </DataFetcher>
     </Provider>
   );
 };
