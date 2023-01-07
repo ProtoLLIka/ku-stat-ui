@@ -1,8 +1,10 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import rootReducer from "./empty";
+import { configureStore } from "@reduxjs/toolkit";
+import statReducer from "./stat";
 
-// const store = configureStore({
-//   reducer: rootReducer,
-// });
+const store = configureStore({
+  reducer: statReducer,
+});
 
-// export default store;
+export type AppDispatch = typeof store.dispatch
+// export const useAppDispatch: () => AppDispatch = store.dispatch
+export default store;

@@ -7,7 +7,15 @@
     "lib": ["dom", "esnext"],
     "strict": true,
     "sourceMap": true,
-    "target": "esnext"
+    "target": "esnext",
+    "baseUrl": "./src",
+    "paths": {
+      "api": ["api/*"],
+      "assets": ["assets/*"],
+      "components": ["components/*"],
+      "store": ["store/*"],
+      "utils": ["utils/*"]
+    }
   },
   "exclude": ["node_modules"]
 }
