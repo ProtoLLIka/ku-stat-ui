@@ -1,0 +1,26 @@
+version: "2.1"
+
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    
+    # volumes:
+    
+    command: ["npm", "run", "start"]
+    ports:
+      - "3000:3000"
+    # healthcheck:
+    #   test: curl --fail http://localhost:8000/ping || exit 1
+    #   interval: 5s
+    #   timeout: 3s
+    #   retries: 3
+    networks:
+      - net
+    env_file:
+      - .env
+
+
+networks:
+  net:
+    driver: bridge
