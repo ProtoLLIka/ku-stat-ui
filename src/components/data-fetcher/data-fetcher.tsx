@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { AppDispatch } from 'store/index';
 import { getStudentStatAction } from 'store/statistic/actions';
 
-export const DataFetcher: React.FC = () => {
+export const DataFetcher: React.FC = ({children}) => {
   const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {
@@ -11,5 +11,5 @@ export const DataFetcher: React.FC = () => {
     dispatch(getStudentStatAction(15) as any);
   }, []);
 
-  return <div>DataFetcher</div>;
+  return <div>DataFetcher{children}</div>;
 };
