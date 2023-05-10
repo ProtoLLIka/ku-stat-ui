@@ -7,8 +7,7 @@ export const DataFetcher: React.FC = ({children}) => {
   const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {
-    //TODO: any
-    dispatch(getStudentStatAction(15) as any);
+    dispatch(getStudentStatAction(1182) as any);
   }, []);
 
   return <div>DataFetcher{children}</div>;

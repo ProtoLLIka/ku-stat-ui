@@ -1,11 +1,12 @@
 import { createReducer, PayloadAction } from '@reduxjs/toolkit';
 
-import { initialStatState } from './types';
+import { InitialStatState } from './types';
 import { getStudentStatAction } from './actions';
 
-const initialState: initialStatState = {
+const initialState: InitialStatState = {
   solutions: [],
 };
+
 const reducer = createReducer(initialState, {
   [getStudentStatAction.fulfilled.type]: (state, { payload }) => {
     state.solutions = payload;

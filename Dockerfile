@@ -3,6 +3,7 @@ WORKDIR /code
 COPY . /code
 
 
+RUN npm ci
+
 RUN npm install webpack-dev-server -g
 
-RUN npm install --no-progress --ignore-optional

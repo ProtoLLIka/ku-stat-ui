@@ -1,4 +1,4 @@
-export type initialStatState = {
+export type InitialStatState = {
   solutions: SolutionGroup[];
 };
 

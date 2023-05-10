@@ -32,13 +32,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-      favicon: './src/assets/favicon.ico',
+      favicon: 'public/favicon.ico',
     }),
     new MiniCssExtractPlugin(),
     new webpack.DefinePlugin({
       API_URL: JSON.stringify(process.env.API_URL || 'http://srv.kod-u.ru:49010'),
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
   resolve: {
     alias: {
