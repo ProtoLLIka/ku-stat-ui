@@ -3,5 +3,23 @@
   "tabWidth": 2,
   "printWidth": 100,
   "singleQuote": true,
-  "semicolons": true
+  "semicolons": true,
+  "importOrder": [
+    "^react(.*)",
+    "^@api/(.*)$",
+    "^@assets/(.*)$",
+    "^@components/(.*)$",
+    "^@consts/(.*)$",
+    "^@helpers/(.*)$",
+    "^@hooks/(.*)$",
+    "^@pages/(.*)$",
+    "^@routes/(.*)$",
+    "^@store/(.*)$",
+    "^@styles/(.*)$",
+    "^@utils/(.*)$",
+    "^@constants/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

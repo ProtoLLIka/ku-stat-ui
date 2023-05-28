@@ -10,12 +10,15 @@
     "target": "esnext",
     "baseUrl": "./src",
     "paths": {
-      "api": ["api/*"],
-      "assets": ["assets/*"],
-      "components": ["components/*"],
-      "store": ["store/*"],
-      "utils": ["utils/*"]
-    }
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@store/*": ["store/*"],
+      "@type/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@constants/*": ["constants/*"]
+    },
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules"]
 }

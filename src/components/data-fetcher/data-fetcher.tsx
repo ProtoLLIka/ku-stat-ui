@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from 'store/index';
-import { getStudentStatAction } from 'store/statistic/actions';
+import { AppDispatch } from '@store/types';
 
-export const DataFetcher: React.FC = ({children}) => {
+import { getStudentStatAction } from '@store/actions';
+
+export const DataFetcher: React.FC<any> = ({children}) => {
   const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getStudentStatAction(1182) as any);
+    dispatch(getStudentStatAction(556));
   }, []);
 
   return <div>DataFetcher{children}</div>;

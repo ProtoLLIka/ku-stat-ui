@@ -1,3 +1,5 @@
+import { store } from '.';
+
 export type InitialStatState = {
   solutions: SolutionGroup[];
 };
@@ -15,3 +17,6 @@ type Solution = {
   dateSolved: number;
   tryCnt: number;
 };
+
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
