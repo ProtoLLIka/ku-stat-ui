@@ -7,7 +7,7 @@ services:
 
     # volumes:
 
-    command: sh -c "cd stable && http-server -p 3000"
+    command: sh -c "npm run start"
     ports:
       - '3000:3000'
     # healthcheck:

@@ -6,5 +6,8 @@ RUN npm ci && \
     npm cache clean --force
 
 RUN npm install webpack-dev-server -g && \
-npm install -g http-server
+    npm install -g http-server
 
+RUN npm run build && \
+    cd dist && \    
+    http-server -p 3000
