@@ -7,7 +7,7 @@ services:
 
     # volumes:
 
-    command: sh -c "cd stable && http-server"
+    command: sh -c "cd stable && http-server -p 3000"
     ports:
       - '3000:3000'
     # healthcheck:
