@@ -5,5 +5,6 @@ COPY . /code
 RUN npm ci && \
     npm cache clean --force
 
-RUN npm install webpack-dev-server -g
+RUN npm install webpack-dev-server -g && \
+npm install -g http-server
 
