@@ -9,4 +9,4 @@ RUN npm install webpack-dev-server -g && \
 
 RUN npm run build && \
     cd dist && \    
-    http-server -p 3000
+    http-server -p 3000 -a 0.0.0.0
