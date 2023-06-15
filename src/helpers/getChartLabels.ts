@@ -9,5 +9,5 @@ const labelFormatFunctions = {
   month: (date: number): string => dayjs(date * 1000).format('MM.YYYY'),
 };
 
-export const getChartLabels = (solutions: SolutionGroup[], period: Period): string[] =>
-  solutions.map(({ dayStart }) => labelFormatFunctions[period](dayStart));
+export const getChartLabels = (date: number, period: Period): string =>
+  labelFormatFunctions[period](date);

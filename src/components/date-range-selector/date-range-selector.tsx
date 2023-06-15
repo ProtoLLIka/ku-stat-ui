@@ -12,8 +12,13 @@ const { RangePicker } = DatePicker;
 const DateRangeSelector = () => {
   const dispatch: AppDispatch = useDispatch();
 
-  const rangePicker = (dates: Dayjs[]) =>
-    dispatch(setDateRange({ dateStart: dates[0].unix(), dateEnd: dates[1].unix() }));
+  const rangePicker = (dates: Dayjs[]) => {
+    if (!dates) {
+      dispatch(setDateRange({ dateStart: null, dateEnd: null }));
+    } else {
+      dispatch(setDateRange({ dateStart: dates[0].unix(), dateEnd: dates[1].unix() }));
+    }
+  };
 
   return (
     <div>

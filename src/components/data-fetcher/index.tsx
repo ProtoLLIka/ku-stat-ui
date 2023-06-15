@@ -1,1 +1,1 @@
-export { DataFetcher } from './data-fetcher';
+export { default } from './data-fetcher';

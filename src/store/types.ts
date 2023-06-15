@@ -14,7 +14,7 @@ export type SolutionGroup = {
   problemsSolved: Solution[];
 };
 
-type Solution = {
+export type Solution = {
   id: number;
   collectionName: string;
   taskName: string;
