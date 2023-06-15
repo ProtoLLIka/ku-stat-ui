@@ -55,6 +55,8 @@ module.exports = {
       '@store': path.resolve(__dirname, './src/store'),
       '@type': path.resolve(__dirname, './src/types'),
       '@utils': path.resolve(__dirname, './src/utils'),
+      '@helpers': path.resolve(__dirname, './src/helpers'),
+      '@pages': path.resolve(__dirname, './src/pages'),
       '@constants': path.resolve(__dirname, './src/constants'),
     },
     extensions: ['.ts', '.tsx', '.js'],

@@ -1,14 +1,32 @@
+import { ConfigProvider } from 'antd';
+import ruLocale from 'antd/locale/ru_RU';
+
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+import Main from '@pages/main/main';
+import NotFound from '@pages/not-found/not-found';
 
 import { store } from '@store/index';
-import { DataFetcher } from '@components/data-fetcher';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Main />,
+  },
+  {
+    path: '/*',
+    element: <NotFound />,
+  },
+]);
 
 export const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <DataFetcher/>
+      <ConfigProvider locale={ruLocale}>
+        <RouterProvider router={router} />
+      </ConfigProvider>
     </Provider>
   );
 };

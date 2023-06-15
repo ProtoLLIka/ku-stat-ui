@@ -1,15 +1,25 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '@store/types';
+import { useSelector } from 'react-redux';
+
+import { getQueryParams } from '@helpers/getQueryParams';
 
 import { getStudentStatAction } from '@store/actions';
+import { selectPeriod } from '@store/selectors';
+import { selectDateRange } from '@store/selectors';
+import { AppDispatch } from '@store/types';
 
-export const DataFetcher: React.FC<any> = ({children}) => {
+const DataFetcher: React.FC<any> = ({ children }) => {
   const dispatch: AppDispatch = useDispatch();
+  const { id } = getQueryParams();
+  const period = useSelector(selectPeriod);
+  const { dateStart, dateEnd } = useSelector(selectDateRange);
 
   useEffect(() => {
-    dispatch(getStudentStatAction(1182));
-  }, []);
+    dispatch(getStudentStatAction({ id, group: period, dateStart, dateEnd }));
+  }, [id, period, dateStart, dateEnd]);
 
-  return <div>DataFetcher{children}</div>;
+  return children as React.ReactElement;
 };
+
+export default DataFetcher;

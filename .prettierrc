@@ -6,6 +6,7 @@
   "semicolons": true,
   "importOrder": [
     "^react(.*)",
+    "^[./]",
     "^@api/(.*)$",
     "^@assets/(.*)$",
     "^@components/(.*)$",
@@ -17,8 +18,7 @@
     "^@store/(.*)$",
     "^@styles/(.*)$",
     "^@utils/(.*)$",
-    "^@constants/(.*)$",
-    "^[./]"
+    "^@constants/(.*)$"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true

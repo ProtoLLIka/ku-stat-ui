@@ -1,5 +1,12 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
 
-import getStudentStat from '@api/get-student-stat';
+import { InitialStatState } from './types';
+
+import getStudentStat from '@api/get-student-stat/request';
 
 export const getStudentStatAction = createAsyncThunk('getStudentStat', getStudentStat);
+
+export const setPeriod = createAction('setPeriod');
+
+export const setDateRange =
+  createAction<Pick<InitialStatState, 'dateEnd' | 'dateStart'>>('setDateRange');

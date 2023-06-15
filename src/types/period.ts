@@ -1,4 +1,4 @@
-export enum STAT_GROUP {
+export enum Period {
   day = 'day',
   week = 'week',
   month = 'month',

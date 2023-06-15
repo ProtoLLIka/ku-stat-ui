@@ -1,7 +1,12 @@
+import { Period } from '@type/period';
+
 import { store } from '.';
 
 export type InitialStatState = {
   solutions: SolutionGroup[];
+  period: Period;
+  dateStart: number | null;
+  dateEnd: number | null;
 };
 
 export type SolutionGroup = {

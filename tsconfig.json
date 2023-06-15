@@ -16,7 +16,9 @@
       "@store/*": ["store/*"],
       "@type/*": ["types/*"],
       "@utils/*": ["utils/*"],
-      "@constants/*": ["constants/*"]
+      "@constants/*": ["constants/*"],
+      "@helpers/*": ["helpers/*"],
+      "@pages/*": ["pages/*"]
     },
     "resolveJsonModule": true
   },
