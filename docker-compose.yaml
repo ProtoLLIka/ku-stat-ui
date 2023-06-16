@@ -4,10 +4,7 @@ services:
   app:
     build: .
     restart: unless-stopped
-
-    # volumes:
-
-    command: sh -c "npm run build && cd dist && http-server -p 3000 -a 0.0.0.0"
+    command: sh -c "cd dist && http-server -p 3000 -a 0.0.0.0"
     ports:
       - '3000:3000'
     # healthcheck:
@@ -19,8 +16,6 @@ services:
       - net
     env_file:
       - .env
-    volumes:
-      - .:/code
 
 networks:
   net:
