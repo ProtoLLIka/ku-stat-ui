@@ -8,5 +8,7 @@ export const getStudentStatAction = createAsyncThunk('getStudentStat', getStuden
 
 export const setPeriod = createAction('setPeriod');
 
+export const setChartType = createAction('setChartType');
+
 export const setDateRange =
   createAction<Pick<InitialStatState, 'dateEnd' | 'dateStart'>>('setDateRange');

@@ -1,10 +1,12 @@
 import { Period } from '@type/period';
 
 import { store } from '.';
+import { ChartType } from '@type/chart-type';
 
 export type InitialStatState = {
   solutions: SolutionGroup[];
   period: Period;
+  chartType: ChartType;
   dateStart: number | null;
   dateEnd: number | null;
 };

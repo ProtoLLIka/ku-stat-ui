@@ -2,6 +2,7 @@ import { Space } from 'antd';
 
 import React from 'react';
 
+import ChartTypeSwitcher from '@components/chart-type-switcher/chart-type-switcher';
 import DataFetcher from '@components/data-fetcher';
 import DateRangeSelector from '@components/date-range-selector';
 import PeriodSwitcher from '@components/period-switcher';
@@ -16,6 +17,7 @@ const Main = () => {
           <Space>
             <PeriodSwitcher />
             <DateRangeSelector />
+            <ChartTypeSwitcher />
           </Space>
           <SolutionChart />
           <SolutionTable />

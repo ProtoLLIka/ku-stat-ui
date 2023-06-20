@@ -36,7 +36,7 @@ const SolutionTable = () => {
   const solutions = useSelector(selectSolutions);
   const tableData = getFlatSolutionList(solutions);
 
-  return <Table columns={columns} dataSource={tableData} pagination={false} scroll={{ y: 400 }} />;
+  return <Table columns={columns} dataSource={tableData} pagination={false} scroll={{ y: 300 }} />;
 };
 
 export default SolutionTable;
