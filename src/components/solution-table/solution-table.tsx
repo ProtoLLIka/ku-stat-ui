@@ -22,6 +22,7 @@ const columns: ColumnsType<Solution> = [
     dataIndex: 'score',
     key: 'score',
     sorter: (a, b) => a.score - b.score,
+    width: 120
   },
   {
     title: 'Дата',
@@ -29,6 +30,7 @@ const columns: ColumnsType<Solution> = [
     key: 'dateSolved',
     sorter: (a, b) => a.dateSolved - b.dateSolved,
     render: (value) => dayjs(value * 1000).format('DD.MM.YYYY'),
+    width: 120
   },
 ];
 
