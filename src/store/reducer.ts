@@ -9,7 +9,7 @@ import { getStudentStatAction, setChartType, setDateRange, setPeriod } from '@st
 const initialState: InitialStatState = {
   solutions: [],
   period: Period.day,
-  chartType: ChartType.score,
+  chartType: ChartType.count,
   dateStart: null,
   dateEnd: null,
 };
