@@ -1,4 +1,4 @@
-import { Space, Table, Tag } from 'antd';
+import { Space, Table, Tag, Tooltip } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import dayjs from 'dayjs';
 
@@ -12,6 +12,13 @@ import { Solution, SolutionGroup } from '@store/types';
 
 const columns: ColumnsType<Solution> = [
   {
+    title: 'Название раздела',
+    dataIndex: 'collectionName',
+    key: 'collectionName',
+    sorter: (a, b) => a.collectionName.localeCompare(b.collectionName),
+    width: 200,
+  },
+  {
     title: 'Название',
     dataIndex: 'taskName',
     key: 'taskName',
@@ -22,7 +29,7 @@ const columns: ColumnsType<Solution> = [
     dataIndex: 'score',
     key: 'score',
     sorter: (a, b) => a.score - b.score,
-    width: 120
+    width: 120,
   },
   {
     title: 'Дата',
@@ -30,7 +37,7 @@ const columns: ColumnsType<Solution> = [
     key: 'dateSolved',
     sorter: (a, b) => a.dateSolved - b.dateSolved,
     render: (value) => dayjs(value * 1000).format('DD.MM.YYYY'),
-    width: 120
+    width: 120,
   },
 ];
 
